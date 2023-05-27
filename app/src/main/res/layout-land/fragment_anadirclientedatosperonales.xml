@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.anadirClienteDatosPersonales.AñadirClienteDatosPeronalesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Apellidos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Apellido/s"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Nombres"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Nombres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            android:ems="10"
+            android:hint="Nombre/s"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/Apellidos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Correo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="18dp"
+            android:ems="10"
+            android:hint="Correo electrónico"
+
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/mostrarFechaNacimiento"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Nombres" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mostrarFechaNacimiento"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="false"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Fecha Nacimiento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Correo"
+            app:layout_constraintTop_toBottomOf="@+id/Apellidos" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/CURP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+
+            android:ems="10"
+            android:hint="CURP"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/RFC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Correo" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/RFC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="RFC"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/CURP"
+            app:layout_constraintTop_toBottomOf="@+id/mostrarFechaNacimiento" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Municipio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="80dp"
+            android:ems="16"
+            android:hint="Municipio"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CodigoPostal" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Calle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:ems="9"
+            android:hint="Calle"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/NumeroExt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CURP" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/NumeroExt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:ems="5"
+            android:hint="Num. Ext."
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/NumInt"
+            app:layout_constraintTop_toBottomOf="@+id/RFC" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/NumInt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:ems="5"
+            android:hint="Num. Int."
+            android:inputType="textPersonName"
+            android:maxLength="5"
+            app:layout_constraintEnd_toStartOf="@+id/CodigoPostal"
+            app:layout_constraintTop_toBottomOf="@+id/RFC" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/CodigoPostal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:ems="8"
+            android:hint="CodigoPostal"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RFC" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Colonia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="40dp"
+            android:ems="16"
+            android:hint="Colonia"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Calle" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Estado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="40dp"
+            android:ems="16"
+            android:hint="Estado"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Colonia" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="100dp"
+            app:ccpDialog_keyboardAutoPopup="false"
+            app:ccpDialog_showNameCode="false"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_defaultNameCode="MX"
+            app:ccp_showFullName="true"
+            app:ccp_showNameCode="false"
+            app:ccp_showPhoneCode="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Municipio" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BotonContinuar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:text="Continuar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countryCodePicker" /> 
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

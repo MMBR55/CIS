@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.anadirClienteDatosPersonales.AñadirClienteDatosPeronalesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Apellidos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:ems="8"
+            android:hint="Apellido/s"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Nombres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Nombre/s"
+            android:inputType="textNoSuggestions"
+            app:layout_constraintEnd_toStartOf="@+id/Apellidos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Correo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="18dp"
+            android:ems="10"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toStartOf="@+id/mostrarFechaNacimiento"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Nombres" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mostrarFechaNacimiento"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Fecha Nacimiento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Apellidos" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/CURP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+
+            android:ems="10"
+            android:hint="CURP"
+            android:maxLength="18"
+            android:inputType="textNoSuggestions"
+            app:layout_constraintEnd_toStartOf="@+id/RFC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Correo" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/RFC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="RFC"
+            android:maxLength="13"
+            android:inputType="textNoSuggestions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/CURP"
+            app:layout_constraintTop_toBottomOf="@+id/mostrarFechaNacimiento" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Municipio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Municipio"
+            android:inputType="textNoSuggestions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Colonia"
+            app:layout_constraintTop_toBottomOf="@+id/CodigoPostal" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Calle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Calle"
+            android:inputType="textNoSuggestions"
+            app:layout_constraintEnd_toStartOf="@+id/NumeroExt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CURP" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/NumeroExt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:ems="5"
+            android:hint="Num. Ext."
+            android:inputType="textNoSuggestions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Calle"
+            app:layout_constraintTop_toBottomOf="@+id/RFC" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/NumInt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:ems="5"
+            android:hint="Num. Int."
+            android:inputType="textNoSuggestions"
+            android:maxLength="5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Calle" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/CodigoPostal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="35dp"
+            android:ems="5"
+            android:hint="CodigoPostal"
+            android:inputType="number"
+            android:maxLength="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/NumInt"
+            app:layout_constraintTop_toBottomOf="@+id/NumeroExt" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Colonia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:ems="8"
+            android:hint="Colonia"
+            android:inputType="textNoSuggestions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NumInt" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/Estado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="5dp"
+            android:ems="10"
+            android:hint="Estado"
+            android:inputType="textNoSuggestions"
+            app:layout_constraintEnd_toStartOf="@+id/countryCodePicker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Colonia" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BotonContinuar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:text="Continuar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Estado" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
